@@ -29,3 +29,15 @@ Covered topics
 - ✅ [optimistic updates](https://react-query.tanstack.com/overview)
 - ✅ [Axios Interceptor](https://react-query.tanstack.com/overview)
 
+# Query Cache :
+- Query Cache,We go Home to Traditional SUperHeroes,every time we see loading text but incase of useQuery 
+first time usequery is fired for super heroes keys, isLoading is set to true and network request is sent 
+to fetch the data.
+- When request is completed it is cached using he query key and the fetch superheroes function as the unique identfiers.
+- When we visit from Home page to RQ superoes Heroes react query will check if data for this query exists in 
+cache, since it exist, cache data is sent imediately without setting [isLoading  - true]
+- Every query result is cached for 5 minutes and react-query relies on cache for subsquent request.
+
+- Case is react query knows that the server data might have updated and cache mightnot contain latest data 
+  so background refetch is trigerred for same query and if fetch is sucessful the new data is updated in the ui 
+- IF isloading is not changed does use query provide another flag to indicate the background refetching of the query, the answer is yes and the flag is called  "isfetching"
