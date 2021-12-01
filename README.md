@@ -33,7 +33,7 @@ Covered topics
 - Query Cache,We go Home to Traditional SUperHeroes,every time we see loading text but incase of useQuery 
 first time usequery is fired for super heroes keys, isLoading is set to true and network request is sent 
 to fetch the data.
-- When request is completed it is cached using he query key and the fetch superheroes function as the unique identfiers.
+- When request is completed it is cached using the query key and the fetch superheroes function as the unique identfiers.
 - When we visit from Home page to RQ superoes Heroes react query will check if data for this query exists in 
 cache, since it exist, cache data is sent imediately without setting [isLoading  - true]
 - Every query result is cached for 5 minutes and react-query relies on cache for subsquent request.
