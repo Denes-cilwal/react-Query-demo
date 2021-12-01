@@ -12,19 +12,19 @@
 
 Covered topics
 
-✅ [Basic Queries](https://react-query.tanstack.com/overview)
-✅ [Poll data](https://react-query.tanstack.com/overview)
-✅ [RQ dev tools](https://react-query.tanstack.com/overview)
-✅ [Create resuable query hooks](https://react-query.tanstack.com/overview)
-✅ [Query by ID](https://react-query.tanstack.com/overview)
-✅ [Parallel queries](https://react-query.tanstack.com/overview)
-✅ [Dynamic queries](https://react-query.tanstack.com/overview)
-✅ [Dependent Queries](https://react-query.tanstack.com/overview)
-✅ [Infinite and paginated queries](https://react-query.tanstack.com/overview)
-✅ [optmistic updates](https://react-query.tanstack.com/overview)
-✅ [Invalidate queries](https://react-query.tanstack.com/overview)
-✅ [optimistic updates](https://react-query.tanstack.com/overview)
-✅ [Axios Interceptor](https://react-query.tanstack.com/overview)
+- ✅ [Basic Queries](https://react-query.tanstack.com/overview)
+- ✅ [Poll data](https://react-query.tanstack.com/overview)
+- ✅ [RQ dev tools](https://react-query.tanstack.com/overview)
+- ✅ [Create resuable query hooks](https://react-query.tanstack.com/overview)
+- ✅ [Query by ID](https://react-query.tanstack.com/overview)
+- ✅ [Parallel queries](https://react-query.tanstack.com/overview)
+- ✅ [Dynamic queries](https://react-query.tanstack.com/overview)
+- ✅ [Dependent Queries](https://react-query.tanstack.com/overview)
+- ✅ [Infinite and paginated queries](https://react-query.tanstack.com/overview)
+- ✅ [optmistic updates](https://react-query.tanstack.com/overview)
+- ✅ [Invalidate queries](https://react-query.tanstack.com/overview)
+- ✅ [optimistic updates](https://react-query.tanstack.com/overview)
+- ✅ [Axios Interceptor](https://react-query.tanstack.com/overview)
 
 
 
