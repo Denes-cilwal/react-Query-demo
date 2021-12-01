@@ -8,7 +8,12 @@ export const RQSuperHeroesPage = () => {
     //   cacheTime: 5000, 
     // no additional request with time frame of 30 sec (isLoading and isFetcfing = false for 30s for susquent request)
     //  default stale time :0sec
-      staleTime:30000
+    //   staleTime:30000,
+
+    refetchOnMount:true,
+
+    // sync with remote data
+    refetchOnWindowFocus:true
     }
   );
 
