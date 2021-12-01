@@ -9,6 +9,9 @@
 - Most of the state management libraries are good for working with client state
 - State management libraries are not great for working with asynchronous or server state.
 
+Need of React-query Over useEffect:
+-  https://blog.bitsrc.io/how-to-start-using-react-query-4869e3d5680d
+
 
 Covered topics
 
