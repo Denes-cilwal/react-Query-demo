@@ -29,7 +29,3 @@ Covered topics
 - ✅ [optimistic updates](https://react-query.tanstack.com/overview)
 - ✅ [Axios Interceptor](https://react-query.tanstack.com/overview)
 
-
-
-
-
