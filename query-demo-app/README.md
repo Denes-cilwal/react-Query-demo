@@ -31,5 +31,8 @@ Covered topics
 
 
 
-
-
+# Default Cache time: 5min
+# QueryCache: 
+- Default Stale time:0sec
+- Query Cache is to reduce network request for data that doesnot necessarily  change often
+- isLoading = False and isFeteching = false

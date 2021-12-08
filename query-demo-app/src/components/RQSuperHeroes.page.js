@@ -1,23 +1,20 @@
 import { useQuery } from "react-query";
 import { fetchSuperHeroes } from "../services/SuperHeroes";
 export const RQSuperHeroesPage = () => {
-  const { isLoading, data, isError, error } = useQuery(
+  const { isLoading, data, isError, error, isFetching } = useQuery(
     "super-heroes",
     // function that returns a query: get request to json server
     fetchSuperHeroes,
     {
     //   cacheTime: 5000, 
-    // no additional request with time frame of 30 sec (isLoading and isFetcfing = false for 30s for susquent request)
     //  default stale time :0sec
-    //   staleTime:30000,
+      staleTime:30000,
+    // compo
+    // refetchOnMount:true,
 
-    refetchOnMount:true,
-
-    // sync with remote data
-    refetchOnWindowFocus:true
     }
   );
-
+console.log(isLoading, isFetching)
   if (isLoading) {
     return <h2>Loading...</h2>;
   }
