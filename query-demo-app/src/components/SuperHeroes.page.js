@@ -17,9 +17,7 @@ export const SuperHeroesPage = () => {
     })
   }, [])
 
-  // Query Cache --- we go Home to Traditional SUperHeroes ,
-  //  every time we see loading text but incase of useQuery 
-// every query result is cached for 5 minutes and react-query relies on cache for subsquent request.
+ 
   if (isLoading) {
     return <h2>Loading...</h2>
   }

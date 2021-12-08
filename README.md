@@ -41,3 +41,11 @@ cache, since it exist, cache data is sent imediately without setting [isLoading 
 - Case is react query knows that the server data might have updated and cache mightnot contain latest data 
   so background refetch is trigerred for same query and if fetch is sucessful the new data is updated in the ui 
 - IF isloading is not changed does use query provide another flag to indicate the background refetching of the query, the answer is yes and the flag is called  "isfetching"
+
+# Default Cache time: 5min
+# QueryCache: 
+- Default Stale time:0sec
+- Query Cache is to reduce network request for data that doesnot necessarily  change often
+- isLoading = False and isFeteching = false
+
+# RQ devs tools

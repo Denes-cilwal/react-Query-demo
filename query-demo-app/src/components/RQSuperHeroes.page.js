@@ -3,28 +3,27 @@ import { fetchSuperHeroes } from "../services/SuperHeroes";
 export const RQSuperHeroesPage = () => {
   const { isLoading, data, isError, error, isFetching, refetch } = useQuery(
     "super-heroes",
-    // function that returns a query: get request to json server
     fetchSuperHeroes,
     {
-    //   cacheTime: 5000, 
-    //  default stale time :0sec
-      // staleTime:30000,
-    // component mounts- refetch occue
-    // refetchOnMount:true,
-    // any time tab gets missed background refetch is initiased
-      // refetchOnWindowFocus:true
-
+      /*
+       cacheTime: 5000, 
+      default stale time :0sec
+       staleTime:30000,
+     refetchOnMount:true,
+      refetchOnWindowFocus:true
+*/
       // fetching data incase of user-event, not on component mount
-      enabled:false,
-      onSuccess:(data)=>{
+      enabled: false,
+      // sucess and error callbacks
+      onSuccess: (data) => {
         console.log("side effect after data fetching", data)
       },
-      onError:(data)=>{
+      onError: (data) => {
         console.log("error during data fetching", data)
       }
     }
   );
-console.log(isLoading, isFetching)
+  console.log(isLoading, isFetching)
   if (isLoading || isFetching) {
     return <h2>Loading...</h2>;
   }
