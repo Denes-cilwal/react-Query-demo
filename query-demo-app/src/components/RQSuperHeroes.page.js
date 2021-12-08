@@ -1,7 +1,7 @@
 import { useQuery } from "react-query";
 import { fetchSuperHeroes } from "../services/SuperHeroes";
 export const RQSuperHeroesPage = () => {
-  const { isLoading, data, isError, error, isFetching } = useQuery(
+  const { isLoading, data, isError, error, isFetching, refetch } = useQuery(
     "super-heroes",
     // function that returns a query: get request to json server
     fetchSuperHeroes,
@@ -10,13 +10,16 @@ export const RQSuperHeroesPage = () => {
     //  default stale time :0sec
       // staleTime:30000,
     // component mounts- refetch occue
-    refetchOnMount:true,
+    // refetchOnMount:true,
     // any time tab gets missed background refetch is initiased
-      refetchOnWindowFocus:true
+      // refetchOnWindowFocus:true
+
+      // fetching data incase of user-event, not on component mount
+      enabled:false
     }
   );
 console.log(isLoading, isFetching)
-  if (isLoading) {
+  if (isLoading || isFetching) {
     return <h2>Loading...</h2>;
   }
 
@@ -29,6 +32,7 @@ console.log(isLoading, isFetching)
       {data?.data.map((hero) => {
         return <div key={hero.name}>{hero.name}</div>;
       })}
+      <button onClick={refetch}>Fetch Heroes</button>
     </>
   );
 };
