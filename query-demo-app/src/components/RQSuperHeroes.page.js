@@ -1,8 +1,9 @@
 import { useQuery } from "react-query";
 import { fetchSuperHeroes } from "../services/SuperHeroes";
 export const RQSuperHeroesPage = () => {
-  const { isLoading, data, isError, error, isFetching } = useQuery(
+  const { isLoading, data, isError, error } = useQuery(
     "super-heroes",
+    // function that returns a query: get request to json server
     fetchSuperHeroes,
     {
     //   cacheTime: 5000, 
