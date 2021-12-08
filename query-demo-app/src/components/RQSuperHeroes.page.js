@@ -8,10 +8,11 @@ export const RQSuperHeroesPage = () => {
     {
     //   cacheTime: 5000, 
     //  default stale time :0sec
-      staleTime:30000,
-    // compo
-    // refetchOnMount:true,
-
+      // staleTime:30000,
+    // component mounts- refetch occue
+    refetchOnMount:true,
+    // any time tab gets missed background refetch is initiased
+      refetchOnWindowFocus:true
     }
   );
 console.log(isLoading, isFetching)
