@@ -20,6 +20,12 @@ export const RQSuperHeroesPage = () => {
       },
       onError: (data) => {
         console.log("error during data fetching", data)
+      },
+      // automatically recieves api data as an arugument
+      // filter and data transformation concept applies here
+      select: (data) => {
+        const result = data?.data.map(hero => hero.name)
+        return result
       }
     }
   );
@@ -34,8 +40,8 @@ export const RQSuperHeroesPage = () => {
   return (
     <>
       <h2>React Query Super Heroes Page</h2>
-      {data?.data.map((hero) => {
-        return <div key={hero.name}>{hero.name}</div>;
+      {data?.map((heroName) => {
+        return <div key={heroName}>{heroName}</div>;
       })}
       <button onClick={refetch}>Fetch Heroes</button>
     </>
