@@ -15,7 +15,13 @@ export const RQSuperHeroesPage = () => {
       // refetchOnWindowFocus:true
 
       // fetching data incase of user-event, not on component mount
-      enabled:false
+      enabled:false,
+      onSuccess:(data)=>{
+        console.log("side effect after data fetching", data)
+      },
+      onError:(data)=>{
+        console.log("error during data fetching", data)
+      }
     }
   );
 console.log(isLoading, isFetching)
